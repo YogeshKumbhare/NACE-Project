@@ -1,11 +1,9 @@
-package net.guides.springboot2.springboot2jpacrudexample.repository;
+package com.naceproject.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import net.guides.springboot2.springboot2jpacrudexample.model.Nace;
-
-import java.util.Optional;
+import com.naceproject.model.Nace;
 
 @Repository
 public interface NACERepository extends JpaRepository<Nace, Integer>{

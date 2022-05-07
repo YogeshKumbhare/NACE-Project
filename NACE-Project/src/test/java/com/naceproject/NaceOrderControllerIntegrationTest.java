@@ -1,4 +1,4 @@
-package net.guides.springboot2.springboot2jpacrudexample;
+package com.naceproject;
 
 import static org.junit.Assert.assertNotNull;
 
@@ -14,7 +14,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import net.guides.springboot2.springboot2jpacrudexample.model.Nace;
+import com.naceproject.model.Nace;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -46,14 +46,14 @@ public class NaceOrderControllerIntegrationTest {
 	}
 
 	@Test
-	public void testGetEmployeeById() {
+	public void testGetOrdersById() {
 		Nace nace = restTemplate.getForObject(getRootUrl() + "/orders/398481", Nace.class);
 		System.out.println(nace.getOrder());
 		assertNotNull(nace);
 	}
 
 	@Test
-	public void testCreateEmployee() {
+	public void testCreateOrder() {
 		Nace nace = new Nace();
 		nace.setCode("A");
 		nace.setDescription("AGRICULTURE, FORESTRY AND FISHING");
