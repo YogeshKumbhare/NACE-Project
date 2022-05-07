@@ -1,8 +1,17 @@
-# Angular8-SpringBoot-CRUD-Tutorial
-Develop a single page application(SPA) using Angular 8 as a front-end and Spring boot restful API as a backend.
-
-https://www.javaguides.net/2019/06/spring-boot-angular-7-crud-example-tutorial.html
-
-# YouTube Video
-
-https://youtu.be/lYMKywB46go
+ 
+  Nace-Project:
+  
+ Table Creation 
+ 
+ CREATE TABLE IF NOT EXISTS nace (
+        order INT PRIMARY KEY,
+		level VARCHAR(255),
+        code VARCHAR(255),
+		parent VARCHAR(255),
+        description VARCHAR(255),
+		this_item_includes VARCHAR(2500),
+        this_item_also_excludes VARCHAR(2500),
+		rulings VARCHAR(255),
+        this_item_excludes VARCHAR(2500),
+		ref VARCHAR(255)
+    );
