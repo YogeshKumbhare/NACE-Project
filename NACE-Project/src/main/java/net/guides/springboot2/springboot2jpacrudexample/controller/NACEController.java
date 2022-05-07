@@ -27,12 +27,12 @@ public class NACEController {
 	private NACERepository naceRepository;
 
 	@GetMapping("/allOrders")
-	public List<Nace> getAllEmployees() {
+	public List<Nace> getAllOrders() {
 		return naceRepository.findAll();
 	}
 
 	@GetMapping("/orders/{id}")
-	public ResponseEntity<Nace> getEmployeeById(@PathVariable(value = "id") int orderId)
+	public ResponseEntity<Nace> getOrdersById(@PathVariable(value = "id") int orderId)
 			throws ResourceNotFoundException {
 		Nace nace = naceRepository.findById(orderId).orElseThrow(() -> new ResourceNotFoundException("Orders not found for this id :: " + orderId));
 		return ResponseEntity.ok().body(nace);
